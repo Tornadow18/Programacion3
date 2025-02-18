@@ -37,9 +37,9 @@ public class MayoresMenoresMedia {
         for (int i = 0; i < menores.size(); i++) {
             arregloMenores[i] = menores.get(i);
         }
-        System.out.println("Arreglo de números mayores que la media:");
+        System.out.println("Arreglo de numeros mayores que la media:");
         imprimirArreglo(arregloMayores);
-        System.out.println("Arreglo de números menores que la media:");
+        System.out.println("Arreglo de numeros menores que la media:");
         imprimirArreglo(arregloMenores);
 
         scanner.close();
@@ -55,7 +55,7 @@ public class MayoresMenoresMedia {
 
     static void imprimirArreglo(int[] arreglo) {
         if (arreglo.length == 0) {
-            System.out.println("El arreglo está vacío.");
+            System.out.println("El arreglo esta vacio.");
         } else {
             for (int elemento : arreglo) {
                 System.out.print(elemento + " ");
