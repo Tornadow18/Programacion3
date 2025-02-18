@@ -15,12 +15,10 @@ public class NegativosCerosPositivos {
             arregloA[i] = scanner.nextInt();
         }
 
-        // Usamos ArrayList para almacenar los números separados
         ArrayList<Integer> negativos = new ArrayList<>();
         ArrayList<Integer> ceros = new ArrayList<>();
         ArrayList<Integer> positivos = new ArrayList<>();
 
-        // Clasificamos los números en el arreglo original
         for (int elemento : arregloA) {
             if (elemento < 0) {
                 negativos.add(elemento);
