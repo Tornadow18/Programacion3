@@ -18,7 +18,7 @@ public class PosicionElementosIguales {
         System.out.println("Ingrese el valor x:");
         int x = scanner.nextInt();
 
-        // Encontrar las posiciones de los elementos iguales a x
+
         ArrayList<Integer> posiciones = new ArrayList<>();
         for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i] == x) {
