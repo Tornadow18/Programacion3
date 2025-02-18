@@ -14,7 +14,7 @@ public class SumaOpuestos {
 
         if (arregloA.length % 2 != 0) 
         {
-            System.out.println("El arreglo debe tener un número par de elementos para calcular la suma de opuestos.");
+            System.out.println("El arreglo debe tener un numero par de elementos para calcular la suma de opuestos.");
             return;
         }
 
@@ -35,7 +35,7 @@ public class SumaOpuestos {
     {
         if (arreglo.length == 0) 
         {
-            System.out.println("El arreglo está vacío.");
+            System.out.println("El arreglo esta vacio.");
         } else {
             for (int elemento : arreglo) 
             {
