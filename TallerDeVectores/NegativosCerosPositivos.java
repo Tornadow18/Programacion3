@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class NegativosCerosPositivos {
@@ -14,10 +15,12 @@ public class NegativosCerosPositivos {
             arregloA[i] = scanner.nextInt();
         }
 
+        // Usamos ArrayList para almacenar los números separados
         ArrayList<Integer> negativos = new ArrayList<>();
         ArrayList<Integer> ceros = new ArrayList<>();
         ArrayList<Integer> positivos = new ArrayList<>();
 
+        // Clasificamos los números en el arreglo original
         for (int elemento : arregloA) {
             if (elemento < 0) {
                 negativos.add(elemento);
@@ -28,26 +31,13 @@ public class NegativosCerosPositivos {
             }
         }
 
-        int[] arregloNegativos = new int[negativos.size()];
-        int[] arregloCeros = new int[ceros.size()];
-        int[] arregloPositivos = new int[positivos.size()];
+        int[] arregloNegativos = negativos.stream().mapToInt(i -> i).toArray();
+        int[] arregloCeros = ceros.stream().mapToInt(i -> i).toArray();
+        int[] arregloPositivos = positivos.stream().mapToInt(i -> i).toArray();
 
-        for (int i = 0; i < negativos.size(); i++) {
-            arregloNegativos[i] = negativos.get(i);
-        }
-        for (int i = 0; i < ceros.size(); i++) {
-            arregloCeros[i] = ceros.get(i);
-        }
-        for (int i = 0; i < positivos.size(); i++) {
-            arregloPositivos[i] = positivos.get(i);
-        }
-
-        System.out.println("Arreglo de números negativos:");
-        imprimirArreglo(arregloNegativos);
-        System.out.println("Arreglo de números ceros:");
-        imprimirArreglo(arregloCeros);
-        System.out.println("Arreglo de números positivos:");
-        imprimirArreglo(arregloPositivos);
+        System.out.println("Arreglo de números negativos: " + Arrays.toString(arregloNegativos));
+        System.out.println("Arreglo de números ceros: " + Arrays.toString(arregloCeros));
+        System.out.println("Arreglo de números positivos: " + Arrays.toString(arregloPositivos));
 
         scanner.close();
     }
